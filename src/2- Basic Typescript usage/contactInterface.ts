@@ -28,9 +28,23 @@ let primaryContact: Contact2 = {
 //Defining types using type aliases (semantic meanin)
 type ConctactName = string;
 
+//Defining enumerable types
+enum ContactStatus {
+  Active,
+  Inactive,
+  New,
+}
+
 interface Contact2WithAlias {
   id: number;
   name: ConctactName;
   birthDate: Date;
-  optionalField?: string;
+  status: ContactStatus;
 }
+
+let otherContact: Contact2WithAlias = {
+  birthDate: new Date("01-01-1980"),
+  id: 12345,
+  name: "Jamie Johnson",
+  status: ContactStatus.Active,
+};
