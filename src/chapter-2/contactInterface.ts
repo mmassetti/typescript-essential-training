@@ -1,3 +1,5 @@
+//Creating custom types with interfaces
+
 interface Contact2 extends Address {
   id: number;
   name: string;
@@ -22,3 +24,13 @@ let primaryContact: Contact2 = {
   province: "Buenos Aires",
   postalCode: "8000",
 };
+
+//Defining types using type aliases (semantic meanin)
+type ConctactName = string;
+
+interface Contact2WithAlias {
+  id: number;
+  name: ConctactName;
+  birthDate: Date;
+  optionalField?: string;
+}
