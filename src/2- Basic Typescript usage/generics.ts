@@ -22,6 +22,6 @@ function clone4<T1, T2>(source: T1): T2 {
 const e = clone4<Contact5, Date>(c);
 
 //Eg 3: Restrict type
-function clone<T1, T2 extends T1>(source: T1): T2 {
+function clone5<T1, T2 extends T1>(source: T1): T2 {
   return Object.apply({}, source);
 }
